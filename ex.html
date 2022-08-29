@@ -8,16 +8,14 @@
 	</head>
 	
 	<body>
-		<h2>データをそのまま表示する例</h2>
-		<!-- データをそのまま表示するときマスタッシュで囲む-->
 		<div id="app">
-			<p> {{ myText }}</p>
+			<p>{{ myText }}</p>
 		</div>
 
 		<script>
 			new Vue({
-				el: '#app',
-				data: {
+				el:'#app',
+				data:{
 					myText:'Hello!!!'
 				}
 			})
