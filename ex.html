@@ -9,19 +9,21 @@
 	
 	<body>
 		<div id="app">
-			<p>{{ myNumber }}</p>
-			<p>{{ myText }}</p>
-			<p>{{ myBool }}</p>
+			<p>{{ myTea }}</p>
+			<p>{{ myTea[1].name }}¥{{ myTea[1].price }}</p>
 			
 		</div>
 
 		<script>
+			var teaList = [
+					{name:'ダージリン',price:600},
+					{name:'アールグレイ',price:600},
+					{name:'セイロン',price:600},
+				];
 			new Vue({
 				el:'#app',
 				data:{
-					myNumber:12345,
-					myText:'Hello!!!',
-					myBool:true,
+					myTea:teaList
 				}
 			})
 		</script>
