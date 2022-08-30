@@ -9,14 +9,19 @@
 	
 	<body>
 		<div id="app">
-			<p v-text="myText"></p>
+			<p>{{ myNumber }}</p>
+			<p>{{ myText }}</p>
+			<p>{{ myBool }}</p>
+			
 		</div>
 
 		<script>
 			new Vue({
 				el:'#app',
 				data:{
-					myText:'Hello!!!'
+					myNumber:12345,
+					myText:'Hello!!!',
+					myBool:true,
 				}
 			})
 		</script>
