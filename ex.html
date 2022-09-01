@@ -9,15 +9,20 @@
     
     <body>
         <div id="app">
-            <label><input type="checkbox" v-model="myCheck">
-            チェックボックスは、{{ myCheck }}</label>
+            <label><input type="radio" value="red" v-model="picked">
+                赤</label><br>
+            <label><input type="radio" value="green" v-model="picked">
+                緑</label><br>
+                <label><input type="radio" value="blue" v-model="picked">
+                青</label><p>
+                    {{ picked }}を選択
         </div>
 
         <script>
             new Vue({
                 el: '#app',
                 data: {
-                    myCheck: false
+                    picked: 'red'
                 }
             })
         </script>
