@@ -8,23 +8,24 @@
     </head>
     
     <body>
-        <div id="app">
-            <label><input type="radio" value="red" v-model="picked">
-                赤</label><br>
-            <label><input type="radio" value="green" v-model="picked">
-                緑</label><br>
-                <label><input type="radio" value="blue" v-model="picked">
-                青</label><p>
-                    {{ picked }}を選択
+        <h2>クリックしたら、1増やす例</h2>
+		<div id="app">
+			<p>{{ count }}</p> 
+			<button v-on:click="countUp">1増やす</button>
         </div>
 
         <script>
             new Vue({
-                el: '#app',
-                data: {
-                    picked: 'red'
-                }
-            })
+				el: '#app',
+				data: {
+					count:0
+				},
+				methods: {
+					countUp: function() {
+						this.count++;
+					}
+				}
+			})
         </script>
         <style>
 
