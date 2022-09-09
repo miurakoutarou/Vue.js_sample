@@ -10,8 +10,10 @@
    <body>
 		<h2>Google Chartsの円グラフにボタンで投票できる例</h2>
 		<h3>好きなランチ投票</h3>
+		<!-- ここに円グラフが描かれる -->
 		<div id="chart_div" style="height: 500px;"></div>
 		<div id="app">
+			<!-- 値と番号に一つずつ取り出しながら表示を繰り返すorgdataの0番目は表示の必要なし-->
 			<li v-for="(item, c) in dataArray" v-if="c>0">{{item[0]}} : {{item[1]}}
 				<button v-on:click="addOne(c)">一票</button>
 			</li>
@@ -46,6 +48,7 @@
 				},
 				methods: {
 					addOne: function(val) {
+						//対象番号のデータを取り出す
 						var obj = this.dataArray[val];
 						obj[1]++;
 						this.dataArray.splice(val, 1, obj);
