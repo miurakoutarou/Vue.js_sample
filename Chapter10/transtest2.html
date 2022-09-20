@@ -10,6 +10,7 @@
 	<body>
 		<h2>ボタンを押してリストが増減するとき、アニメーションする例</h2>
 		<div id="app">
+			<!-- リストの時はtransition-groupで囲む　識別子としてv-bind:key="違う値"も必要 -->
 			<transition-group>
 				<li v-for="item in dataArray" v-bind:key="item"> {{item}}</li>
 			</transition-group>
@@ -19,6 +20,7 @@
 		</div>
 		
 		<script>
+			// transitionボタンを押してリストが増減するとき
 			new Vue({
 				el: '#app',
 				data: {
